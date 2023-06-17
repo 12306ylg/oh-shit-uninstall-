@@ -8,7 +8,7 @@ key = input("俄亥俄州立大学匙：")
 
 user = input("俄亥俄州立大学名称/身份：")
 
-url = "https://osu.ppy.sh/api/get_user"
+url = "https://osu.ppy.sh/api/get_user?" + "k=" + key +" &u=" + user
 
 querystring = {"location":city,"key":key}
 
