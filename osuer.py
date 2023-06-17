@@ -19,6 +19,13 @@ data = json.loads(response.text)
 id = data["user_id"]
 name = data["username"]
 jd = data["join_date"]
+ct = data["country"]
+ttscore =["total_score"]
+counrank = ["pp_country_rank"]
 print("播放器身份",id)
 print("播放器名称",name)
 print("加入约会",jd)
+print("乡村",ct)
+print("总伤痕",ttscore)
+print("乡村pp排名")
+
