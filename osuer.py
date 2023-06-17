@@ -17,5 +17,8 @@ response = requests.request("GET", url, headers=headers )
 data = json.loads(response.text)
 
 id = data["user_id"]
-
+name = data["username"]
+jd = data["join_date"]
 print("播放器身份",id)
+print("播放器名称",name)
+print("加入约会",jd)
