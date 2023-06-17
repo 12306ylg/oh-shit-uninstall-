@@ -1,3 +1,4 @@
+#coding=UTF-8
 import requests
 
 import json
@@ -10,23 +11,13 @@ user = input("俄亥俄州立大学名称/身份：")
 
 url = "https://osu.ppy.sh/api/get_user?" + "k=" + key +" &u=" + user
 
-querystring = {"location":city,"key":key}
+headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 EdgA/110.0.0.0"}
 
-headers = {
+response = requests.request("GET", url, headers=headers )
 
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"}
+print("response")
 
-response = requests.request("GET", url, headers=headers, params=querystring)
-
-if "location" in response.json():
-
-    city_id = response.json()["location"][0]["id"]
-
-else:
-
-    print("获取城市ID失败，请检查你的请求参数和API Key是否正确。")
-
-    exit()
+exit()
 
 url = "https://devapi.qweather.com/v7/weather/now"
 
