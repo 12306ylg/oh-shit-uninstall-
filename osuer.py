@@ -16,11 +16,11 @@ response = requests.request("GET", url, headers=headers )
 
 data = json.loads(response.text)
 
-id = data["user_id"]
+uid = data["user_id"]
 name = data["username"]
 jd = data["join_date"]
 ct = data["country"]
-ttscore =data["total_score"]
+ttscore = data["total_score"]
 counprank = data["pp_country_rank"]
 prank = data["pp_rank"]
 print("播放器身份",id)
@@ -28,7 +28,5 @@ print("播放器名称",name)
 print("加入约会",jd)
 print("乡村",ct)
 print("总伤痕",ttscore)
-print("pp排名"prank)
+print("pp排名",prank)
 print("乡村pp排名",counprank)
-
-
