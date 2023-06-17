@@ -4,21 +4,7 @@ import json
 
 import os
 
-import pickle
-
-if not os.path.exists("first_time.pickle"):
-
-    key = input("请输入和风天气key：")
-
-    with open("first_time.pickle", "wb") as f:
-
-        pickle.dump(key, f)
-
-else:
-
-    with open("first_time.pickle", "rb") as f:
-
-        key = pickle.load(f)
+key = input("请输入和风天气key：")
 
 city = input("请输入你想查询的城市名称：")
 
