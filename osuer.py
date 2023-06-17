@@ -4,11 +4,11 @@ import json
 
 import os
 
-key = input("请输入和风天气key：")
+key = input("俄亥俄州立大学匙：")
 
-city = input("请输入你想查询的城市名称：")
+user = input("俄亥俄州立大学名称/身份：")
 
-url = "https://geoapi.qweather.com/v2/city/lookup"
+url = "https://osu.ppy.sh/api/get_user"
 
 querystring = {"location":city,"key":key}
 
