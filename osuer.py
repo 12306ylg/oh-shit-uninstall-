@@ -16,6 +16,6 @@ response = requests.request("GET", url, headers=headers )
 
 data = json.loads(response.text)
 
-obs_time = data["obsTime"]
+id = data["user_id"]
 
-print("露点湿度",dew)"""
+print("播放器身份",id)
