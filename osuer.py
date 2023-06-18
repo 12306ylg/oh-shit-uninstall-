@@ -13,9 +13,9 @@ url = "https://osu.ppy.sh/api/get_user?" + "k=" + key +" &u=" + user
 headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 EdgA/110.0.0.0"}
 #UA
 response = requests.request("GET", url, headers=headers )
-
+print ("获取成功")
 data = json.loads(response.text)
-
+print ("解析成功")
 uid = data[0]["user_id"]
 name = data[0]["username"]
 jd = data[0]["join_date"]
