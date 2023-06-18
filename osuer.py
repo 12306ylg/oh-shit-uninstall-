@@ -16,16 +16,16 @@ response = requests.request("GET", url, headers=headers )
 data = json.loads(response.text)
 print ("解析成功")
 ecode = data[0]["error"]
-if ecode = "Please provide a valid API key.":
+if ecode == "Please provide a valid API key.":
  print (错误:请输入正确的key)
 else
-uid = data[0]["user_id"]
-name = data[0]["username"]
-jd = data[0]["join_date"]
-ct = data[0]["country"]
-ttscore = data[0]["total_score"]
-counprank = data[0]["pp_country_rank"]
-prank = data[0]["pp_rank"]
+ uid = data[0]["user_id"]
+ name = data[0]["username"]
+ jd = data[0]["join_date"]
+ ct = data[0]["country"]
+ ttscore = data[0]["total_score"]
+ counprank = data[0]["pp_country_rank"]
+ prank = data[0]["pp_rank"]
 print ("获取成功(^^)")
 print("播放器身份",uid)
 print("播放器名称",name)
