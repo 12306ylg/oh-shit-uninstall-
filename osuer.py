@@ -16,13 +16,13 @@ response = requests.request("GET", url, headers=headers )
 
 data = json.loads(response.text)
 
-uid = data("user_id")
-name = data("username")
-jd = data("join_date")
-ct = data("country")
-ttscore = data("total_score")
-counprank = data("pp_country_rank")
-prank = data("pp_rank")
+uid = data[0]["user_id"]
+name = data[0]["username"]
+jd = data[0]["join_date"]
+ct = data[0]["country"]
+ttscore = data[0]["total_score"]
+counprank = data[0]["pp_country_rank"]
+prank = data[0]["pp_rank"]
 print("播放器身份",uid)
 print("播放器名称",name)
 print("加入约会",jd)
