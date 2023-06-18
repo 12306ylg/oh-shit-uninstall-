@@ -15,6 +15,10 @@ headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/
 response = requests.request("GET", url, headers=headers )
 data = json.loads(response.text)
 print ("解析成功")
+ecode = data[0]["error"]
+if ecode = "Please provide a valid API key.":
+ print (错误:请输入正确的key)
+else
 uid = data[0]["user_id"]
 name = data[0]["username"]
 jd = data[0]["join_date"]
