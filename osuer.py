@@ -8,7 +8,7 @@ urls = input("选择api \n osu!stable(stb)  osu!lazer(lazer)")
 if urls == "stb":
     url = "https://osu.ppy.sh/api/get_user?" + "k=" + key +" &u=" + user
 elif urls =="lazer":
-    url = "https://osu.ppy.sh/api/get_user?" + "k=" + key +" &u=" + user
+    url = "https://lazer.ppy.sh/api/get_user?" + "k=" + key +" &u=" + user
 else:
     print ("铸币")
     exit (0)
