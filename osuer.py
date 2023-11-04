@@ -1,10 +1,11 @@
+#我要找我爸爸
 #coding=UTF-8
 import requests
 import json
 url = 0
 key = input("俄亥俄州立大学钥匙：")#密钥  获取(有osu账号即可):https://osu.ppy.sh/home/account/edit
 user = input("俄亥俄州立大学播放器名称/身份：")
-urls = input("选择api \n osu!stable(stb)  osu!lazer(lazer)")
+urls = input("选择api \n osu!stable(stb)  osu!lazer（测试）(lazer)")
 if urls == "stb":
     url = "https://osu.ppy.sh/api/get_user?" + "k=" + key +" &u=" + user
 elif urls =="lazer":
