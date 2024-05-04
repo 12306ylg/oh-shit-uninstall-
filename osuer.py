@@ -12,7 +12,7 @@ elif urls =="lazer":
     url = "https://lazer.ppy.sh/api/get_user?" + "k=" + key +" &u=" + user
 else:
     print ("铸币")
-    exit (0)
+    exit ()
 headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 EdgA/110.0.0.0"}
 #UA
 response = requests.request("GET", url, headers=headers )
